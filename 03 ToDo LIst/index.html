@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <link rel="stylesheet" href="style.css" />
+    <title>To Do List</title>
+</head>
+
+<body>
+    <div class="container">
+        <div class="input-box">
+            <form action="#" id="task-input-form">
+                <input type="text" name="task" id="taskval" class="block" />
+
+                <input type="submit" value="ADD TASK" name="" id="addtask" class="block" />
+            </form>
+        </div>
+        <div class="output-box">
+            <ul class="tasks">
+                <li class="task" style="display: none;">
+                    This is a task
+                    <a class="deltask"> X </a>
+                </li>
+            </ul>
+            <input type="submit" value="CLEAR TASKS" name="" id="cleartasks" />
+        </div>
+    </div>
+
+    <script src="app.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,141 @@
+
+body {
+  padding: 0;
+  margin: 0;
+  width: 100vw;
+  height: 100vh;
+  background: #282828;
+}
+
+.clock {
+  width: 300px;
+  height: 300px;
+  padding: 15px;
+  border-radius: 50%;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  border: 7px solid #282828;
+  box-shadow: -4px -4px 10px rgba(67, 67, 67, 0.5),
+    inset 4px 4px 10px rgba(0, 0, 0, 0.5),
+    inset -4px -4px 10px rgba(67, 67, 67, 0.5), 4px 4px 10px rgba(0, 0, 0, 0.3);
+}
+
+.outer-face {
+  position: relative;
+  background: #282828;
+  overflow: hidden;
+  width: 100%;
+  height: 100%;
+  border-radius: 100%;
+}
+
+.outer-face::after {
+  -webkit-transform: rotate(90deg);
+  -moz-transform: rotate(90deg);
+  transform: rotate(90deg);
+}
+
+.outer-face::after,
+.outer-face::before,
+.outer-face .marking {
+  content: "";
+  position: absolute;
+  width: 5px;
+  height: 100%;
+  background: #f51d1d;
+  z-index: 0;
+  left: 49%;
+}
+
+.outer-face .marking {
+  background: #bdbdcb;
+  width: 3px;
+}
+
+.outer-face .marking.marking-one {
+  -webkit-transform: rotate(30deg);
+  -moz-transform: rotate(30deg);
+  transform: rotate(30deg);
+}
+
+.outer-face .marking.marking-two {
+  -webkit-transform: rotate(60deg);
+  -moz-transform: rotate(60deg);
+  transform: rotate(60deg);
+}
+
+.outer-face .marking.marking-three {
+  -webkit-transform: rotate(120deg);
+  -moz-transform: rotate(120deg);
+  transform: rotate(120deg);
+}
+
+.outer-face .marking.marking-four {
+  -webkit-transform: rotate(150deg);
+  -moz-transform: rotate(150deg);
+  transform: rotate(150deg);
+}
+
+.inner-face {
+    background: #282828;
+    overflow: hidden;
+    width:80%;
+    height:80%;
+    border-radius: 100%;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 1;
+  }
+
+  .hand {
+    width: 50%;
+    right: 50%;
+    height: 6px;
+    background: #61afff;
+    position: absolute;
+    top: 50%;
+    border-radius: 6px;
+    transform-origin: 100%;
+    transform: rotate(90deg);
+    transition-timing-function: cubic-bezier(0.1, 2.7, 0.58, 1);
+  }
+
+  .hand.hour-hand {
+    width: 30%;
+    z-index: 3;
+  }
+  
+  .hand.min-hand {
+    height: 3px;
+    z-index: 10;
+    width: 40%;
+  }
+  
+  .hand.second-hand {
+    background: #c31aee;
+    width: 45%;
+    height: 2px;
+  }
+
+  .center{
+    background: #ffffff77;
+    overflow: hidden;
+    width: 10%;
+    height: 10%;
+    border-radius: 100%;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 1;
+  }
+  
+  .centermost{
+    background: #ffffff;
+    width: 5%;
+    height: 5%;      
+}
